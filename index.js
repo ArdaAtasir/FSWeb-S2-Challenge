@@ -186,11 +186,18 @@ var manav;
 			4. elde edilen string döndürülecek
  */
 
-function emojileriDonustur(/* kodlar buraya */){
-/* kodlar buraya */
+function emojileriDonustur(mesaj,emoji){
+
+	for (let  x in emoji){
+
+		mesaj = mesaj.replace(x.toUpperCase(), emoji[x]);
+		mesaj = mesaj.replace(x.toLowerCase(), emoji[x]);
+	}
+	       
+return mesaj;
 
 }
-
+console.log(emojileriDonustur("Merhaba :):() ",emojiler));
 
 
 /*  Bu satırın aşağısındaki kodları lütfen değiştirmeyin  */
